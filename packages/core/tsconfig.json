@@ -1,0 +1,30 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+        "rootDir": "src",
+        "outDir": "./dist",
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "composite": true,
+        "allowJs": false,
+        "declaration": true,
+        "declarationMap": true,
+        "allowSyntheticDefaultImports": true,
+        "target": "es5",
+        "module": "esnext",
+        "lib": [
+            "es5",
+            "dom"
+        ],
+        "types": [
+            "jest",
+        ]
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist"
+    ]
+}

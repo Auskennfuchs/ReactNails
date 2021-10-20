@@ -1,0 +1,44 @@
+{
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+    ],
+    "compilerOptions": {
+        "incremental": true,
+        "outDir": "./dist",
+        "baseUrl": "src",
+        "moduleResolution": "Node",
+        "module": "CommonJS",
+        "target": "ES2018",
+        "sourceMap": true,
+        "lib": [
+            "esnext"
+        ],
+        "esModuleInterop": true,
+        "alwaysStrict": true,
+        "strictNullChecks": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "resolveJsonModule": true,
+        "paths": {
+            "@reactnails/*": [
+                "packages/*/src/index.ts"
+            ]
+        }
+    },
+    "references": [
+        {
+            "path": "packages/root"
+        },
+        {
+            "path": "packages/apptest"
+        }
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "*.d.ts"
+    ]
+}
