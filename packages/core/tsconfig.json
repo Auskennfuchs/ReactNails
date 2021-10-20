@@ -4,6 +4,7 @@
         "target": "es5",
         "module": "esnext",
         "lib": [
+            "ES5",
             "ESNext",
             "DOM"
         ],
@@ -26,11 +27,11 @@
         "forceConsistentCasingInFileNames": true,
     },
     "include": [
-        "src/**/*",
-        "jest.config.js"
+        "src/**/*"
     ],
     "exclude": [
-        "node_modules",
-        "dist"
+        "src/**/*.test.ts",
+        "jest.config.js",
+        "rollup.config.js"
     ]
 }

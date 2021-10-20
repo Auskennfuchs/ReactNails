@@ -4,9 +4,9 @@ export type WcagPassResult = {
     contrast: number
     passAAALarge: boolean
     passAAA: boolean
-    passAA: boolean,
-    passAALarge: boolean,
-    passGraphUI: boolean,
+    passAA: boolean
+    passAALarge: boolean
+    passGraphUI: boolean
 }
 
 export class Color {
@@ -126,7 +126,7 @@ export class Color {
 
     /**
      * checks color contrast after WCAG 2.1 standard
-     * @param col 
+     * @param col
      * @returns WcagPassResult for contrast on small and large texts
      */
     public wcagContrast = (col: Color): WcagPassResult => {
@@ -142,13 +142,13 @@ export class Color {
     }
 
     /**
-     * 
+     *
      * @returns hex string of current color
      */
     public toString = (): string => this.hex()
 
     /**
-     * 
+     *
      * @returns hex string of current color
      */
     public hex = (): string => {
@@ -159,7 +159,7 @@ export class Color {
     }
 
     /**
-     * 
+     *
      * @returns rgb(r,g,b) representation of current color
      */
     public rgb = (): string => {
@@ -170,7 +170,7 @@ export class Color {
     }
 
     /**
-     * 
+     *
      * @returns hsl(h deg l% s%) representation of current color
      */
     public hsl = (): string => {
@@ -194,9 +194,9 @@ export class Color {
     private static lerp = (start: number, end: number, value: number): number => end * value + (1 - value) * start
 
     private static RGBToHSL(r: number, g: number, b: number): {
-        h: number,
-        s: number,
-        l: number,
+        h: number
+        s: number
+        l: number
     } {
         // Make r, g, and b fractions of 1
         const rP = r / 255
@@ -245,9 +245,9 @@ export class Color {
     }
 
     private static HSLToRGB(hue: number, sat: number, light: number): {
-        r: number,
-        g: number,
-        b: number,
+        r: number
+        g: number
+        b: number
     } {
         const satP = sat / 100
         const lightP = light / 100

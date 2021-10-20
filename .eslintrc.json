@@ -1,0 +1,71 @@
+{
+    "extends": [
+        "airbnb",
+        "airbnb-typescript",
+        "airbnb/hooks"
+    ],
+    "plugins": [
+        "simple-import-sort",
+        "@typescript-eslint",
+        "react-hooks"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2021,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "project": [
+            "tsconfig.json",
+            "packages/*/tsconfig.json"
+        ]
+    },
+    "rules": {
+        "@typescript-eslint/dot-notation": "off",
+        "@typescript-eslint/no-implied-eval": "off",
+        "react/react-in-jsx-scope": "off",
+        "semi": [
+            "warn",
+            "never"
+        ],
+        "@typescript-eslint/semi": [
+            "warn",
+            "never"
+        ],
+        "simple-import-sort/imports": "warn",
+        "simple-import-sort/exports": "warn",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/indent": [
+            "warn",
+            4
+        ],
+        "@typescript-eslint/member-delimiter-style": [
+            "warn",
+            {
+                "multiline": {
+                    "delimiter": "none"
+                }
+            }
+        ],
+        "react/self-closing-comp": "warn",
+        "react/jsx-indent": "off",
+        "max-len": [
+            "warn",
+            140
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ]
+    },
+    "ignorePatterns": [
+        ".eslintrc",
+        "tsconfig.json",
+        "coverage/**/*",
+        "dist/**/*",
+        "jest.config.js",
+        "rollup.config.js"
+    ]
+}

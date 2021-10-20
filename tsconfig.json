@@ -9,7 +9,7 @@
         "baseUrl": "src",
         "moduleResolution": "Node",
         "module": "CommonJS",
-        "target": "ES2018",
+        "target": "es5",
         "sourceMap": true,
         "lib": [
             "esnext"
@@ -30,15 +30,14 @@
     },
     "references": [
         {
-            "path": "packages/root"
+            "path": "./packages/core"
         },
         {
-            "path": "packages/apptest"
+            "path": "./packages/apptest"
         }
     ],
     "exclude": [
         "node_modules",
-        "dist",
-        "*.d.ts"
+        "dist"
     ]
 }

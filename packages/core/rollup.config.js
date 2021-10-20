@@ -28,7 +28,6 @@ export default {
         nodeResolve({
             extensions: ['.tsx', '.ts']
         }),  // Resolves node modules
-        localResolve(),
         babel({
             extensions: EXTENSIONS,  // Compile our TypeScript files
             babelHelpers: "inline",  // Place babel helper functions in the same file they were used
