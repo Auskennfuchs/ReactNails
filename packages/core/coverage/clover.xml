@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1634768504277" clover="3.2.0">
+  <project timestamp="1634768504277" name="All files">
+    <metrics statements="111" coveredstatements="111" conditionals="25" coveredconditionals="25" methods="24" coveredmethods="24" elements="160" coveredelements="160" complexity="0" loc="111" ncloc="111" packages="2" files="2" classes="2"/>
+    <package name="Color">
+      <metrics statements="109" coveredstatements="109" conditionals="25" coveredconditionals="25" methods="23" coveredmethods="23"/>
+      <file name="Color.ts" path="E:\Web\@reactnails\packages\core\src\Color\Color.ts">
+        <metrics statements="109" coveredstatements="109" conditionals="25" coveredconditionals="25" methods="23" coveredmethods="23"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="50" count="41" type="stmt"/>
+        <line num="51" count="41" type="stmt"/>
+        <line num="52" count="41" type="stmt"/>
+        <line num="53" count="41" type="stmt"/>
+        <line num="54" count="41" type="stmt"/>
+        <line num="55" count="41" type="stmt"/>
+        <line num="56" count="41" type="stmt"/>
+        <line num="57" count="41" type="stmt"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="68" count="26" type="stmt"/>
+        <line num="69" count="26" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="80" count="10" type="stmt"/>
+        <line num="81" count="10" type="stmt"/>
+        <line num="84" count="1" type="stmt"/>
+        <line num="85" count="4" type="stmt"/>
+        <line num="86" count="4" type="stmt"/>
+        <line num="89" count="1" type="stmt"/>
+        <line num="90" count="7" type="stmt"/>
+        <line num="91" count="7" type="stmt"/>
+        <line num="92" count="7" type="stmt"/>
+        <line num="100" count="41" type="stmt"/>
+        <line num="107" count="41" type="stmt"/>
+        <line num="113" count="41" type="stmt"/>
+        <line num="120" count="41" type="stmt"/>
+        <line num="121" count="10" type="stmt"/>
+        <line num="122" count="10" type="stmt"/>
+        <line num="123" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="124" count="10" type="stmt"/>
+        <line num="132" count="41" type="stmt"/>
+        <line num="133" count="3" type="stmt"/>
+        <line num="134" count="3" type="stmt"/>
+        <line num="148" count="41" type="stmt"/>
+        <line num="154" count="41" type="stmt"/>
+        <line num="155" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="156" count="1" type="stmt"/>
+        <line num="158" count="4" type="stmt"/>
+        <line num="165" count="41" type="stmt"/>
+        <line num="166" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="167" count="1" type="stmt"/>
+        <line num="169" count="1" type="stmt"/>
+        <line num="176" count="41" type="stmt"/>
+        <line num="177" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="178" count="1" type="stmt"/>
+        <line num="180" count="1" type="stmt"/>
+        <line num="183" count="41" type="stmt"/>
+        <line num="185" count="41" type="cond" truecount="1" falsecount="0"/>
+        <line num="186" count="14" type="cond" truecount="1" falsecount="0"/>
+        <line num="187" count="13" type="stmt"/>
+        <line num="189" count="1" type="stmt"/>
+        <line num="194" count="3" type="stmt"/>
+        <line num="196" count="1" type="stmt"/>
+        <line num="202" count="30" type="stmt"/>
+        <line num="203" count="30" type="stmt"/>
+        <line num="204" count="30" type="stmt"/>
+        <line num="207" count="30" type="stmt"/>
+        <line num="208" count="30" type="stmt"/>
+        <line num="209" count="30" type="stmt"/>
+        <line num="210" count="30" type="stmt"/>
+        <line num="211" count="30" type="stmt"/>
+        <line num="212" count="30" type="stmt"/>
+        <line num="216" count="30" type="cond" truecount="2" falsecount="0"/>
+        <line num="217" count="13" type="stmt"/>
+        <line num="218" count="17" type="cond" truecount="2" falsecount="0"/>
+        <line num="220" count="8" type="stmt"/>
+        <line num="221" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="223" count="3" type="stmt"/>
+        <line num="226" count="6" type="stmt"/>
+        <line num="229" count="30" type="stmt"/>
+        <line num="232" count="30" type="cond" truecount="1" falsecount="0"/>
+        <line num="235" count="30" type="stmt"/>
+        <line num="238" count="30" type="cond" truecount="2" falsecount="0"/>
+        <line num="241" count="30" type="stmt"/>
+        <line num="242" count="30" type="stmt"/>
+        <line num="244" count="30" type="stmt"/>
+        <line num="247" count="1" type="stmt"/>
+        <line num="252" count="10" type="stmt"/>
+        <line num="253" count="10" type="stmt"/>
+        <line num="255" count="10" type="stmt"/>
+        <line num="256" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="257" count="9" type="stmt"/>
+        <line num="259" count="1" type="stmt"/>
+        <line num="261" count="10" type="stmt"/>
+        <line num="262" count="10" type="stmt"/>
+        <line num="263" count="10" type="stmt"/>
+        <line num="264" count="10" type="stmt"/>
+        <line num="265" count="10" type="stmt"/>
+        <line num="268" count="1" type="stmt"/>
+        <line num="269" count="30" type="stmt"/>
+        <line num="270" count="30" type="cond" truecount="1" falsecount="0"/>
+        <line num="271" count="6" type="stmt"/>
+        <line num="273" count="30" type="cond" truecount="1" falsecount="0"/>
+        <line num="274" count="2" type="stmt"/>
+        <line num="276" count="30" type="cond" truecount="1" falsecount="0"/>
+        <line num="277" count="9" type="stmt"/>
+        <line num="278" count="21" type="cond" truecount="1" falsecount="0"/>
+        <line num="279" count="10" type="stmt"/>
+        <line num="280" count="11" type="cond" truecount="1" falsecount="0"/>
+        <line num="281" count="1" type="stmt"/>
+        <line num="283" count="10" type="stmt"/>
+        <line num="286" count="16" type="stmt"/>
+        <line num="288" count="1" type="stmt"/>
+        <line num="289" count="66" type="stmt"/>
+        <line num="290" count="66" type="cond" truecount="2" falsecount="0"/>
+        <line num="291" count="66" type="stmt"/>
+        <line num="293" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="NumberUtils.ts" path="E:\Web\@reactnails\packages\core\src\utils\NumberUtils.ts">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="12" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
