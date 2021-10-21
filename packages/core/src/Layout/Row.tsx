@@ -19,7 +19,7 @@ export enum RowAlignType {
 }
 
 interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
-    align?: RowAlignType,
+    align?: RowAlignType
 }
 
 export const Row = styled(({ align, ...rest }: RowProps) => (<div {...rest} />)).attrs((p: RowProps) => ({

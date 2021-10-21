@@ -1,6 +1,11 @@
 {
-    "typescript.tsdk": "node_modules\\typescript\\lib",
-    "eslint.workingDirectories": [
-        "packages\\core"
-    ]
+  "eslint.workingDirectories": [
+    "./"
+  ],
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }

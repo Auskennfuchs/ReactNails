@@ -10,8 +10,8 @@ export enum BreakPoint {
 
 type BreakPointType = {
     [name in BreakPoint]: {
-        maxWidth?: number,
-        minWidth?: number,
+        maxWidth?: number
+        minWidth?: number
     }
 }
 
@@ -39,7 +39,7 @@ export const MediaQuery: MediaQueryType = {
 }
 
 Object.keys(breakPoints).forEach((k) => {
-    const bp: { maxWidth?: number, minWidth?: number } = breakPoints[k as BreakPoint]
+    const bp: { maxWidth?: number; minWidth?: number } = breakPoints[k as BreakPoint]
     MediaQuery[k] = (...args: [any]) => css`
         @media screen and ${bp.minWidth && `(min-width: ${bp.minWidth}px)`} ${bp.minWidth && bp.maxWidth && ' and '} ${bp.maxWidth && `(max-width: ${bp.maxWidth}px)`} {
             ${css.call(undefined, ...args)}
