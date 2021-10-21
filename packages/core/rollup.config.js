@@ -3,7 +3,6 @@ import nodeResolve from "@rollup/plugin-node-resolve";
 // automatically exlude peer dependencies from build
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import pkg from "./package.json";
-import localResolve from 'rollup-plugin-local-resolve'
 import typescript from "rollup-plugin-typescript2";
 
 // Array of extensions to be handled by babel
