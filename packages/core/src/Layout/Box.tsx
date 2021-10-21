@@ -16,10 +16,10 @@ const StyledBox = styled.div<NailsBoxProps & { boxWidth: WidthType }>`
 `
 
 export const Box = forwardRef<HTMLDivElement, NailsBoxProps>(({ width, children }: NailsBoxProps, ref) => {
-    const resolveWidthEntry = (width: string): string | null => {
-        const parts = width.split('/')
+    const resolveWidthEntry = (inputWidth: string): string | null => {
+        const parts = inputWidth.split('/')
         if (parts.length !== 2) {
-            return width
+            return inputWidth
         }
         const n1 = Number(parts[0])
         const n2 = Number(parts[1])

@@ -51,6 +51,7 @@
         ],
         "react/self-closing-comp": "warn",
         "react/jsx-indent": "off",
+        "react/jsx-props-no-spreading": "warn",
         "react/jsx-indent-props": [
             "warn",
             4
@@ -59,17 +60,13 @@
             "warn",
             140
         ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ]
+        "linebreak-style": "off"
     },
     "ignorePatterns": [
         ".eslintrc",
         "tsconfig.json",
         "coverage/**/*",
         "dist/**/*",
-        "jest.config.js",
         "rollup.config.js"
     ]
 }
