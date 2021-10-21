@@ -20,7 +20,10 @@ export default {
         preserveModules: true  // This one is important for treeshaking features of our library        
     },
     plugins: [
-        typescript({ tsconfig: './tsconfig.build.json' }),
+        typescript({
+            tsconfig: './tsconfig.build.json',
+            outputToFilesystem: true,
+        }),
         peerDepsExternal(),  // https://rollupjs.org/guide/en/#peer-dependencies
         nodeResolve({
             extensions: ['.tsx', '.ts']
