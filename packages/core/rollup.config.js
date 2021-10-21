@@ -3,7 +3,7 @@ import nodeResolve from "@rollup/plugin-node-resolve";
 // automatically exlude peer dependencies from build
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import pkg from "./package.json";
-import typescript from "rollup-plugin-typescript2";
+import typescript from "@rollup/plugin-typescript";
 
 // Array of extensions to be handled by babel
 const EXTENSIONS = [".ts", ".tsx"];
@@ -20,9 +20,7 @@ export default {
         preserveModules: true  // This one is important for treeshaking features of our library        
     },
     plugins: [
-        typescript({
-            exclude: ["**/*.test.ts", "**/*.test.d.ts"]
-        }),
+        typescript({ tsconfig: './tsconfig.build.json' }),
         peerDepsExternal(),  // https://rollupjs.org/guide/en/#peer-dependencies
         nodeResolve({
             extensions: ['.tsx', '.ts']

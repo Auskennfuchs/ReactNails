@@ -24,7 +24,8 @@
         "resolveJsonModule": true,
         "paths": {
             "@reactnails/*": [
-                "packages/*/src/index(.ts|.tsx)"
+                "packages/*/src/index.ts",
+                "packages/*/src/index.tsx"
             ]
         }
     },
