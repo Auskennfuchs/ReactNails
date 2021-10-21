@@ -240,7 +240,7 @@ describe('Color tests', () => {
 
     test('Color RGBA to hsl', () => {
         const color = Color.RGBA(200, 60, 200, 0.3)
-        expect(color.hsl()).toStrictEqual('hsla(300deg 56% 51% 0.3)')
+        expect(color.hsl()).toStrictEqual('hsla(300deg 56% 51% / 0.3)')
     })
 
     test('Color constrast alpha', () => {

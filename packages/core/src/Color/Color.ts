@@ -175,7 +175,7 @@ export class Color {
      */
     public hsl = (): string => {
         if (this.hasAlpha()) {
-            return `hsla(${this.h}deg ${this.s}% ${this.l}% ${this.a})`
+            return `hsla(${this.h}deg ${this.s}% ${this.l}% / ${this.a})`
         }
         return `hsl(${this.h}deg ${this.s}% ${this.l}%)`
     }

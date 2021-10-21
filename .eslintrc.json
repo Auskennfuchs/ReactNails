@@ -51,6 +51,10 @@
         ],
         "react/self-closing-comp": "warn",
         "react/jsx-indent": "off",
+        "react/jsx-indent-props": [
+            "warn",
+            4
+        ],
         "max-len": [
             "warn",
             140
