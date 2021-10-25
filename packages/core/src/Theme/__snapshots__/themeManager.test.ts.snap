@@ -68,7 +68,28 @@ Object {
       "wcagContrast": [Function],
     },
   },
-  "textColors": Object {},
+  "textColors": Object {
+    "white": Color {
+      "a": 1,
+      "b": 255,
+      "contrast": [Function],
+      "darken": [Function],
+      "g": 255,
+      "getNonAlphaColor": [Function],
+      "h": 0,
+      "hasAlpha": [Function],
+      "hex": [Function],
+      "hsl": [Function],
+      "l": 100,
+      "lighten": [Function],
+      "luminance": [Function],
+      "r": 255,
+      "rgb": [Function],
+      "s": 0,
+      "toString": [Function],
+      "wcagContrast": [Function],
+    },
+  },
 }
 `;
 
@@ -140,6 +161,27 @@ Object {
       "wcagContrast": [Function],
     },
   },
-  "textColors": Object {},
+  "textColors": Object {
+    "white": Color {
+      "a": 1,
+      "b": 255,
+      "contrast": [Function],
+      "darken": [Function],
+      "g": 255,
+      "getNonAlphaColor": [Function],
+      "h": 0,
+      "hasAlpha": [Function],
+      "hex": [Function],
+      "hsl": [Function],
+      "l": 100,
+      "lighten": [Function],
+      "luminance": [Function],
+      "r": 255,
+      "rgb": [Function],
+      "s": 0,
+      "toString": [Function],
+      "wcagContrast": [Function],
+    },
+  },
 }
 `;

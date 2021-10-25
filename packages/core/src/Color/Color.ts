@@ -47,6 +47,8 @@ export class Color {
 
     public static readonly black = new Color(0, 0, 0, 0, 0, 0, 1.0)
 
+    public static readonly white = new Color(255, 255, 255, 0, 0, 100, 1.0)
+
     private constructor(r: number, g: number, b: number, h: number, s: number, l: number, a: number) {
         this.r = r
         this.g = g

@@ -44,10 +44,13 @@ describe('ThemeManager', () => {
 
         addThemeComponent<ThemeBasic, DerivedThemeComponent>((res) => ['derivedThemeComponent', {
             ...res.newThemeComponent,
+            bgr: res.newThemeComponent.backgroundColor,
             textColor: Color.RGB(255, 255, 255),
         }])
 
         const resTheme = resolveTheme() as ResDerivedThemeComponent
         expect(resTheme.derivedThemeComponent.backgroundColor).toStrictEqual(Color.black)
+        expect(resTheme.derivedThemeComponent.bgr).toStrictEqual(Color.black)
+        expect(resTheme.derivedThemeComponent.textColor.hex()).toBe(Color.white.hex())
     })
 })

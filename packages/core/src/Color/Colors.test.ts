@@ -249,4 +249,10 @@ describe('Color tests', () => {
         const contrast = Color.contrast(background, textColor)
         expect(contrast).toStrictEqual(1.2)
     })
+
+    test('Color white', () => {
+        expect(Color.white.hex()).toStrictEqual(Color.RGB(255, 255, 255).hex())
+        expect(Color.white.rgb()).toStrictEqual(Color.RGB(255, 255, 255).rgb())
+        expect(Color.white.hsl()).toStrictEqual(Color.RGB(255, 255, 255).hsl())
+    })
 })
