@@ -11,6 +11,7 @@
         "module": "CommonJS",
         "target": "es5",
         "sourceMap": true,
+        "declaration": true,
         "lib": [
             "esnext"
         ],
@@ -20,21 +21,15 @@
         "noImplicitAny": true,
         "noImplicitReturns": true,
         "noImplicitThis": true,
-        "noUnusedLocals": true,
-        "resolveJsonModule": true,
-        "paths": {
-            "@reactnails/*": [
-                "packages/*/src/index.ts",
-                "packages/*/src/index.tsx"
-            ]
-        }
+        "noUnusedLocals": false,
+        "resolveJsonModule": true
     },
     "references": [
         {
-            "path": "./packages/core"
+            "path": "./packages/apptest"
         },
         {
-            "path": "./packages/apptest"
+            "path": "./packages/core"
         }
     ],
     "exclude": [

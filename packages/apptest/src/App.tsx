@@ -1,34 +1,33 @@
-import './App.css'
+import {
+    Box, Color, MediaQueryBreakPoint, NailsApp, SpacingType,
+} from '@reactnails/core'
 
-import { Color } from '@reactnails/core'
-
-import logo from './logo.svg'
-
-const color: Color = Color.RGBA(75, 68, 182, 0.3)
-
-console.log('color', color.hsl())
+const color: Color = Color.RGB(207, 216, 220)
 
 const App = () => (
-    <div className="App">
-        <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p style={{ color: color.rgb() }}>
-                Edit
-                {' '}
-                <code>src/App.tsx</code>
-                {' '}
-                and save to reload.
-            </p>
-            <a
-                className="App-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                Learn React
-            </a>
-        </header>
-    </div>
+    <NailsApp theme={{
+        colors: {
+            backgroundColors: {
+                lightGray: color,
+            },
+        },
+    }}
+    >
+        <Box
+            width="1/3"
+            space={{
+                [MediaQueryBreakPoint.small]: SpacingType.m,
+                [MediaQueryBreakPoint.mediumMin]: SpacingType.l,
+            }}
+            backgroundColor="backgroundColors.lightGray"
+        >
+            Administration
+            {' '}
+            {color.hsl}
+            {' '}
+            {color.hex}
+        </Box>
+    </NailsApp>
 )
 
 export default App

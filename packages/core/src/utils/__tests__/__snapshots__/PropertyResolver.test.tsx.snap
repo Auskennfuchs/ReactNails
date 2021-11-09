@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PropertyResolver tests should apply media array value 1`] = `
+"
+            
+            
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    
+                padding: l xl
+            
+}
+
+        "
+`;
+
+exports[`PropertyResolver tests should apply media value 1`] = `
+"
+            
+            
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    
+                padding: l
+            
+}
+
+        "
+`;
+
+exports[`PropertyResolver tests should apply multiple media values 1`] = `
+"
+            
+            
+            
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    
+                padding: l xl
+            
+}
+
+        
+            
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    
+                padding: m
+            
+}
+
+        "
+`;

@@ -1,10 +1,10 @@
-import { MediaQuery } from './MediaQuery'
+import { MediaQuery } from '../MediaQuery'
 
 describe('MediaQuery tests', () => {
     test('small', () => {
         const cssString = MediaQuery.small`;`
         expect(cssString.join('')).toStrictEqual(`
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
     ;
 }
 `)
@@ -13,7 +13,7 @@ describe('MediaQuery tests', () => {
     test('medium', () => {
         const cssString = MediaQuery.medium`;`
         expect(cssString.join('')).toStrictEqual(`
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
     ;
 }
 `)
@@ -31,7 +31,7 @@ describe('MediaQuery tests', () => {
     test('xlargeIE11', () => {
         const cssString = MediaQuery.xlargeIE11`;`
         expect(cssString.join('')).toStrictEqual(`
-@media screen and (min-width: 1200px) and (max-width: 1919px) and (-ms-high-contrast: active) and (-ms-high-contrast: none) {
+@media screen and (min-width: 1200px) and (max-width: 1919.98px) and (-ms-high-contrast: active) and (-ms-high-contrast: none) {
     ;
 }
 `)
@@ -40,7 +40,7 @@ describe('MediaQuery tests', () => {
     test('largeMax', () => {
         const cssString = MediaQuery.largeMax`;`
         expect(cssString.join('')).toStrictEqual(`
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1199.98px) {
     ;
 }
 `)

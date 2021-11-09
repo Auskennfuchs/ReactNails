@@ -1,4 +1,4 @@
-import { Color, WcagPassResult } from './Color'
+import { Color, WcagPassResult } from '../Color'
 
 describe('Color tests', () => {
     test('Color construct from rgb red', () => {
@@ -9,8 +9,8 @@ describe('Color tests', () => {
         expect(rgbColor.h).toStrictEqual(0)
         expect(rgbColor.s).toStrictEqual(100)
         expect(rgbColor.l).toStrictEqual(50)
-        expect(rgbColor.hsl()).toStrictEqual('hsl(0deg 100% 50%)')
-        expect(rgbColor.rgb()).toStrictEqual('rgb(255,0,0)')
+        expect(rgbColor.hsl).toStrictEqual('hsl(0deg 100% 50%)')
+        expect(rgbColor.rgb).toStrictEqual('rgb(255,0,0)')
     })
 
     test('Color construct from rgb green', () => {
@@ -230,17 +230,17 @@ describe('Color tests', () => {
 
     test('Color RGBA to hex', () => {
         const color = Color.RGBA(100, 100, 100, 0.5)
-        expect(color.hex()).toStrictEqual('#64646480')
+        expect(color.hex).toStrictEqual('#64646480')
     })
 
     test('Color RGBA to rgb', () => {
         const color = Color.RGBA(100, 100, 100, 0.5)
-        expect(color.rgb()).toStrictEqual('rgba(100,100,100,0.5)')
+        expect(color.rgb).toStrictEqual('rgba(100,100,100,0.5)')
     })
 
     test('Color RGBA to hsl', () => {
         const color = Color.RGBA(200, 60, 200, 0.3)
-        expect(color.hsl()).toStrictEqual('hsla(300deg 56% 51% / 0.3)')
+        expect(color.hsl).toStrictEqual('hsla(300deg 56% 51% / 0.3)')
     })
 
     test('Color constrast alpha', () => {
@@ -251,8 +251,8 @@ describe('Color tests', () => {
     })
 
     test('Color white', () => {
-        expect(Color.white.hex()).toStrictEqual(Color.RGB(255, 255, 255).hex())
-        expect(Color.white.rgb()).toStrictEqual(Color.RGB(255, 255, 255).rgb())
-        expect(Color.white.hsl()).toStrictEqual(Color.RGB(255, 255, 255).hsl())
+        expect(Color.white.hex).toStrictEqual(Color.RGB(255, 255, 255).hex)
+        expect(Color.white.rgb).toStrictEqual(Color.RGB(255, 255, 255).rgb)
+        expect(Color.white.hsl).toStrictEqual(Color.RGB(255, 255, 255).hsl)
     })
 })

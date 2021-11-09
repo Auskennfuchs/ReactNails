@@ -16,68 +16,73 @@ type BreakPointType = {
 }
 
 export const breakPoints: BreakPointType = {
-    [BreakPoint.Small]: { maxWidth: 767 },
-    [BreakPoint.Medium]: { minWidth: 768, maxWidth: 991 },
-    [BreakPoint.Large]: { minWidth: 992, maxWidth: 1199 },
-    [BreakPoint.XLarge]: { minWidth: 1200, maxWidth: 1919 },
+    [BreakPoint.Small]: { maxWidth: 767.98 },
+    [BreakPoint.Medium]: { minWidth: 768, maxWidth: 991.98 },
+    [BreakPoint.Large]: { minWidth: 992, maxWidth: 1199.98 },
+    [BreakPoint.XLarge]: { minWidth: 1200, maxWidth: 1919.98 },
     [BreakPoint.Wide]: { minWidth: 1920 },
 }
 
-type CssFunction = (...args: [any]) => FlattenInterpolation<ThemeProps<any>>
+export type CssFunction = (...args: any[]) => FlattenInterpolation<ThemeProps<any>>
 
-interface MediaQueryType {
+export enum MediaQueryBreakPoint {
     /**
      * media query IE11
      */
-    IE11: CssFunction
+    IE11 = 'IE11',
     /**
      * media query small devices <768px
      */
-    small: CssFunction
+    small = 'small',
     /**
      * media query medium devices <992px
      */
-    medium: CssFunction
+    medium = 'medium',
     /**
      * media query large devices <1200px
      */
-    large: CssFunction
+    large = 'large',
     /**
      * media query xlarge devices <1920px
      */
-    xlarge: CssFunction
+    xlarge = 'xlarge',
     /**
      * media query widescreen devices >=1920px
      */
-    wide: CssFunction
-    mediumMin: CssFunction
-    largeMin: CssFunction
-    xlargeMin: CssFunction
-    wideMin: CssFunction
-    smallMax: CssFunction
-    mediumMax: CssFunction
-    largeMax: CssFunction
-    xlargeMax: CssFunction
+    wide = 'wide',
+    mediumMin = 'mediumMin',
+    largeMin = 'largeMin',
+    xlargeMin = 'xlargeMin',
+    wideMin = 'wideMin',
+    smallMax = 'smallMax',
+    mediumMax = 'mediumMax',
+    largeMax = 'largeMax',
+    xlargeMax = 'xlargeMax',
     /**
      * media query small devices on IE11 <768px
      */
-    smallIE11: CssFunction
+    smallIE11 = 'smallIE11',
     /**
      * media query medium devices on IE11 <992px
      */
-    mediumIE11: CssFunction
+    mediumIE11 = 'mediumIE11',
     /**
      * media query large devices on IE11 <1200px
      */
-    largeIE11: CssFunction
+    largeIE11 = 'largeIE11',
     /**
      * media query xlarge devices on IE11 <1920px
      */
-    xlargeIE11: CssFunction
+    xlargeIE11 = 'xlargeIE11',
     /**
      * media query widescreen devices on IE11 >=1920px
      */
-    wideIE11: CssFunction
+    wideIE11 = 'wideIE11',
+
+}
+
+type MediaQueryType = {
+    [name in MediaQueryBreakPoint]: CssFunction
 }
 
 interface LooseMediaQueryType {

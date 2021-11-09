@@ -49,6 +49,8 @@ export class Color {
 
     public static readonly white = new Color(255, 255, 255, 0, 0, 100, 1.0)
 
+    public static readonly magenta = new Color(255, 0, 255, 0, 0, 100, 1.0)
+
     private constructor(r: number, g: number, b: number, h: number, s: number, l: number, a: number) {
         this.r = r
         this.g = g
@@ -147,13 +149,13 @@ export class Color {
      *
      * @returns hex string of current color
      */
-    public toString = (): string => this.hex()
+    public toString = (): string => this.hex
 
     /**
      *
      * @returns hex string of current color
      */
-    public hex = (): string => {
+    public get hex(): string {
         if (this.hasAlpha()) {
             return `#${Color.toHex(this.r)}${Color.toHex(this.g)}${Color.toHex(this.b)}${Color.toHex(this.a * 255)}`
         }
@@ -164,7 +166,7 @@ export class Color {
      *
      * @returns rgb(r,g,b) representation of current color
      */
-    public rgb = (): string => {
+    public get rgb(): string {
         if (this.hasAlpha()) {
             return `rgba(${this.r},${this.g},${this.b},${this.a})`
         }
@@ -175,7 +177,7 @@ export class Color {
      *
      * @returns hsl(h deg l% s%) representation of current color
      */
-    public hsl = (): string => {
+    public get hsl(): string {
         if (this.hasAlpha()) {
             return `hsla(${this.h}deg ${this.s}% ${this.l}% / ${this.a})`
         }

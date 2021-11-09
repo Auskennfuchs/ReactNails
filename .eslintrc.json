@@ -38,6 +38,7 @@
         "no-unused-vars": "off",
         "no-param-reassign": "off",
         "@typescript-eslint/no-unused-vars": "warn",
+        "indent": "off",
         "@typescript-eslint/indent": [
             "warn",
             4
@@ -57,6 +58,8 @@
             "warn",
             4
         ],
+        "react/prop-types": "off",
+        "react/require-default-props": "off",
         "max-len": [
             "warn",
             140

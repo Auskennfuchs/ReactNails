@@ -1,3 +1,5 @@
 export * from './Color'
 export * from './Layout'
+export * from './NailsApp'
 export * from './Theme'
+export * from './utils'

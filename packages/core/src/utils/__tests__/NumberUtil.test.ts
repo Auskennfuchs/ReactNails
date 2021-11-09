@@ -1,4 +1,4 @@
-import { NumberUtils } from './NumberUtils'
+import { NumberUtils } from '../NumberUtils'
 
 describe('NumberUtil tests', () => {
     test('roundDecimal', () => {

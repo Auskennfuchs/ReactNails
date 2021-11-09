@@ -1,6 +1,6 @@
-import { Color } from '..'
-import { addThemeComponent, resolveTheme } from '.'
-import { ThemeEntry } from './baseTheme'
+import { Color } from '../..'
+import { addThemeComponent, resolveTheme } from '..'
+import { ThemeEntry } from '../baseTheme'
 
 describe('ThemeManager', () => {
     test('add theme component', () => {
@@ -51,6 +51,6 @@ describe('ThemeManager', () => {
         const resTheme = resolveTheme() as ResDerivedThemeComponent
         expect(resTheme.derivedThemeComponent.backgroundColor).toStrictEqual(Color.black)
         expect(resTheme.derivedThemeComponent.bgr).toStrictEqual(Color.black)
-        expect(resTheme.derivedThemeComponent.textColor.hex()).toBe(Color.white.hex())
+        expect(resTheme.derivedThemeComponent.textColor.hex).toBe(Color.white.hex)
     })
 })

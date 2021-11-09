@@ -2,10 +2,12 @@
   "name": "@reactnails/core",
   "version": "1.0.0",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "scripts": {
     "tsc": "tsc",
     "build": "rimraf ./dist && tsc -p tsconfig.build.json --emitDeclarationOnly && rollup --config",
+    "prepack": "yarn build",
     "test": "jest"
   },
   "devDependencies": {
@@ -15,6 +17,7 @@
     "@rollup/plugin-typescript": "^8.3.0",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.2",
+    "@types/lodash": "^4.14.176",
     "@types/react": "^17.0.30",
     "@types/react-dom": "^17.0.10",
     "@types/styled-components": "^5.1.15",
@@ -32,8 +35,12 @@
     "styled-components": "^5.3.3"
   },
   "peerDependencies": {
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
-    "styled-components": "^5.0.0"
-  }
+    "lodash": ">=4.0.0",
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0",
+    "styled-components": ">=5.0.0"
+  },
+  "files": [
+    "./dist/**/*"
+  ]
 }

@@ -25,6 +25,7 @@
         "resolveJsonModule": true,
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,
+        "composite": true
     },
     "include": [
         "src/**/*"

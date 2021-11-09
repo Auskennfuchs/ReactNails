@@ -5,4 +5,5 @@ module.exports = {
     ...base,
     name: packageJson.name,
     displayName: packageJson.name,
+    testEnvironment: "jsdom",
 }
