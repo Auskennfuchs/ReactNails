@@ -2,13 +2,14 @@
   "name": "@reactnails/core",
   "version": "1.0.0",
   "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "types": "dist/types/index.d.ts",
   "license": "MIT",
   "scripts": {
     "tsc": "tsc",
     "build": "rimraf ./dist && tsc -p tsconfig.build.json --emitDeclarationOnly && rollup --config",
     "prepack": "yarn build",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watchAll"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",

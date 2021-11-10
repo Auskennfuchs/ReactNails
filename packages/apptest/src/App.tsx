@@ -14,10 +14,14 @@ const App = () => (
     }}
     >
         <Box
-            width="1/3"
+            width={{
+                [MediaQueryBreakPoint.small]: '100vw',
+                [MediaQueryBreakPoint.mediumMin]: '1/2',
+                [MediaQueryBreakPoint.wideMin]: '80vw',
+            }}
             space={{
                 [MediaQueryBreakPoint.small]: SpacingType.m,
-                [MediaQueryBreakPoint.mediumMin]: SpacingType.l,
+                [MediaQueryBreakPoint.mediumMin]: [SpacingType.l, SpacingType.s],
             }}
             backgroundColor="backgroundColors.lightGray"
         >

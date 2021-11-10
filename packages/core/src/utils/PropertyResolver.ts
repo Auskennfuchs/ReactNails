@@ -16,18 +16,23 @@ export const applySingle = (func: ResolverFunc, propName: string, discardNull: b
 }
 
 type PropsMediaQueryValues<T> = {
-    [name in MediaQueryBreakPoint]?: T | Array<T>
+    [name in MediaQueryBreakPoint]?: T
 }
 
-export type MediaQueryAwareType<T> = T | Array<T> | PropsMediaQueryValues<T>
+export type MediaQueryAwareType<T> = T | PropsMediaQueryValues<T>
+
+export type MediaQueryAwareArrayType<T> = MediaQueryAwareType<T | Array<T>>
 
 type PropsType = {
-    [name: string]: MediaQueryAwareType<any>
+    [name: string]: MediaQueryAwareArrayType<any>
 }
 
-const applyMediaQueryValues = <T>(propValue: MediaQueryAwareType<T>, func: ResolverFunc, props: PropsType) => {
+const applyMediaQueryValues = <T>(
+    propValue: MediaQueryAwareArrayType<T> | MediaQueryAwareType<T>,
+    func: ResolverFunc, props: PropsType,
+) => {
     if (Array.isArray(propValue)) {
-        return func(propValue.join(' '), props)
+        return func(propValue, props)
     }
     return func(propValue, props)
 }

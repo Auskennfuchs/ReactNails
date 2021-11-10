@@ -51,11 +51,18 @@ export const baseTheme = {
         backgroundColors,
         textColors,
     } as Colors,
-    spacing(space: SpacingType | number): string {
-        if (typeof space === 'number') {
-            return `${(space as number) * this.base.gap}${this.base.gapUnit}`
+    spacing(space: SpacingType | number | Array<SpacingType | number>): string {
+        const resolveSpace = (sp: SpacingType | number) => {
+            if (typeof sp === 'number') {
+                return `${(sp as number) * this.base.gap}${this.base.gapUnit}`
+            }
+            return `${this.spaces[sp] * this.base.gap}${this.base.gapUnit}`
         }
-        return `${this.spaces[space] * this.base.gap}${this.base.gapUnit}`
+
+        if (Array.isArray(space)) {
+            return space.map(resolveSpace).join(' ')
+        }
+        return resolveSpace(space)
     },
     color(color: Color | string): string {
         if (color instanceof Color) {

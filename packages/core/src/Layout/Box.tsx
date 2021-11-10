@@ -4,18 +4,20 @@ import styled from 'styled-components'
 import { Color } from '../Color'
 import { SpacingType } from '../Theme/baseTheme'
 import {
-    applyMediaQuery, MediaQueryAwareType, resolveBackgroundColor, resolveSpace,
+    applyMediaQuery, MediaQueryAwareArrayType, MediaQueryAwareType, resolveBackgroundColor, resolveSpace,
 } from '../utils/PropertyResolver'
+import { MediaQueryBreakPoint } from './MediaQuery'
 
-type WidthType = string | string[] | null | (string | null)[]
-type WidthInputType = string | string[] | null
+type WidthType = string | null | {
+    [name in MediaQueryBreakPoint]?: string | null
+}
 
 export interface NailsBoxProps extends React.DetailedHTMLProps<React.HtmlHTMLAttributes<HTMLDivElement>, HTMLDivElement> {
     /**
      * width of box inside container. Has to be a ratio or list of ratios, e.g "1/2"
      */
-    width?: string | string[]
-    space?: MediaQueryAwareType<SpacingType>
+    width?: MediaQueryAwareType<string>
+    space?: MediaQueryAwareArrayType<SpacingType>
     backgroundColor?: Color | string
 }
 
@@ -43,13 +45,16 @@ export const Box = forwardRef<HTMLDivElement, NailsBoxProps>(({
         return `${(n1 / n2) * 100}% `
     }, [])
 
-    const convertBoxWidth = useCallback((inputWidth: WidthInputType | undefined): WidthType => {
-        if (!inputWidth || !(typeof inputWidth === 'string' || Array.isArray(inputWidth))) {
+    const convertBoxWidth = useCallback((inputWidth: MediaQueryAwareType<string> | undefined): WidthType => {
+        if (!inputWidth || !(typeof inputWidth === 'string' || typeof inputWidth === 'object')) {
             return null
         }
 
-        if (Array.isArray(inputWidth)) {
-            return inputWidth.map((w) => resolveWidthEntry(w))
+        if (typeof inputWidth === 'object') {
+            return Object.entries(inputWidth).reduce((res, [key, value]) => ({
+                ...res,
+                [key]: resolveWidthEntry(value),
+            }), {})
         }
         return resolveWidthEntry(inputWidth)
     }, [resolveWidthEntry])

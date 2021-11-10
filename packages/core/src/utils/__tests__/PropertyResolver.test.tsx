@@ -2,7 +2,12 @@ import { MediaQueryBreakPoint, SpacingType } from '../..'
 import { applyMediaQuery } from '../PropertyResolver'
 
 describe('PropertyResolver tests', () => {
-    const resolver = (space: SpacingType): string => `padding: ${space}`
+    const resolver = (space: SpacingType | SpacingType[]): string => {
+        if (Array.isArray(space)) {
+            return `padding: ${space.join(' ')}`
+        }
+        return `padding: ${space}`
+    }
 
     test('should apply single value', () => {
         const res = applyMediaQuery(resolver, 'space')({

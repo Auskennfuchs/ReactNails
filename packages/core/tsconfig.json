@@ -19,6 +19,7 @@
         "rootDir": "src",
         "removeComments": true,
         "strict": true,
+        "declarationDir": "./dist/types",
         "moduleResolution": "node",
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
