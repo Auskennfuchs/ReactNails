@@ -1,10 +1,10 @@
 {
     "extends": "../../tsconfig.json",
     "compilerOptions": {
-        "target": "es5",
+        "target": "es2015",
         "module": "esnext",
         "lib": [
-            "ES5",
+            "ES2017",
             "ESNext",
             "DOM"
         ],
@@ -19,7 +19,7 @@
         "rootDir": "src",
         "removeComments": true,
         "strict": true,
-        "declarationDir": "./dist/types",
+        "declarationDir": "dist/types",
         "moduleResolution": "node",
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,

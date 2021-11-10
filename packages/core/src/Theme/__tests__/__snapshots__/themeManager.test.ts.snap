@@ -9,7 +9,7 @@ Object {
   "color": [Function],
   "colors": Object {
     "backgroundColors": Object {
-      "red": Color {
+      "error": Color {
         "a": 1,
         "b": 0,
         "contrast": [Function],
@@ -95,6 +95,62 @@ Object {
     "xxl": 20,
   },
   "spacing": [Function],
+  "textSizes": Object {
+    "100": Object {
+      "fontSize": 11,
+      "fontWeight": 700,
+      "lineHeight": 16,
+      "unit": "px",
+    },
+    "200": Object {
+      "fontSize": 12,
+      "fontWeight": 600,
+      "lineHeight": 16,
+      "unit": "px",
+    },
+    "300": Object {
+      "fontSize": 12,
+      "fontWeight": 600,
+      "lineHeight": 16,
+      "unit": "px",
+    },
+    "400": Object {
+      "fontSize": 14,
+      "fontWeight": 600,
+      "lineHeight": 16,
+      "unit": "px",
+    },
+    "500": Object {
+      "fontSize": 16,
+      "fontWeight": 600,
+      "lineHeight": 20,
+      "unit": "px",
+    },
+    "600": Object {
+      "fontSize": 20,
+      "fontWeight": 500,
+      "lineHeight": 24,
+      "unit": "px",
+    },
+    "700": Object {
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 28,
+      "unit": "px",
+    },
+    "800": Object {
+      "fontSize": 29,
+      "fontWeight": 600,
+      "lineHeight": 32,
+      "unit": "px",
+    },
+    "900": Object {
+      "fontSize": 35,
+      "fontWeight": 500,
+      "lineHeight": 40,
+      "unit": "px",
+    },
+  },
 }
 `;
 
@@ -107,7 +163,7 @@ Object {
   "color": [Function],
   "colors": Object {
     "backgroundColors": Object {
-      "red": Color {
+      "error": Color {
         "a": 1,
         "b": 0,
         "contrast": [Function],
@@ -193,5 +249,61 @@ Object {
     "xxl": 20,
   },
   "spacing": [Function],
+  "textSizes": Object {
+    "100": Object {
+      "fontSize": 11,
+      "fontWeight": 700,
+      "lineHeight": 16,
+      "unit": "px",
+    },
+    "200": Object {
+      "fontSize": 12,
+      "fontWeight": 600,
+      "lineHeight": 16,
+      "unit": "px",
+    },
+    "300": Object {
+      "fontSize": 12,
+      "fontWeight": 600,
+      "lineHeight": 16,
+      "unit": "px",
+    },
+    "400": Object {
+      "fontSize": 14,
+      "fontWeight": 600,
+      "lineHeight": 16,
+      "unit": "px",
+    },
+    "500": Object {
+      "fontSize": 16,
+      "fontWeight": 600,
+      "lineHeight": 20,
+      "unit": "px",
+    },
+    "600": Object {
+      "fontSize": 20,
+      "fontWeight": 500,
+      "lineHeight": 24,
+      "unit": "px",
+    },
+    "700": Object {
+      "fontSize": 24,
+      "fontWeight": 500,
+      "lineHeight": 28,
+      "unit": "px",
+    },
+    "800": Object {
+      "fontSize": 29,
+      "fontWeight": 600,
+      "lineHeight": 32,
+      "unit": "px",
+    },
+    "900": Object {
+      "fontSize": 35,
+      "fontWeight": 500,
+      "lineHeight": 40,
+      "unit": "px",
+    },
+  },
 }
 `;

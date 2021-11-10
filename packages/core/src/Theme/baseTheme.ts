@@ -13,7 +13,7 @@ const palette: Palette = {
 }
 
 const backgroundColors: Palette = {
-    red: palette.red,
+    error: palette.red,
 }
 
 const textColors: Palette = {
@@ -25,6 +25,20 @@ const base = {
     gapUnit: 'px',
 }
 
+enum FontWeight {
+    medium = 500,
+    semibold = 600,
+    bold = 700,
+}
+
+export type TextSizeType = {
+    fontSize: number
+    fontWeight: number | FontWeight
+    textTransform?: 'uppercase' | 'lowercase'
+    lineHeight: number
+    unit: 'px' | 'em' | 'rem'
+}
+
 export enum SpacingType {
     none = 'none',
     xs = 'xs',
@@ -33,6 +47,64 @@ export enum SpacingType {
     l = 'l',
     xl = 'xl',
     xxl = 'xxl',
+}
+
+const textSizes: Record<number, TextSizeType> = {
+    900: {
+        fontSize: 35,
+        fontWeight: FontWeight.medium,
+        lineHeight: 40,
+        unit: 'px',
+    },
+    800: {
+        fontSize: 29,
+        fontWeight: FontWeight.semibold,
+        lineHeight: 32,
+        unit: 'px',
+    },
+    700: {
+        fontSize: 24,
+        fontWeight: FontWeight.medium,
+        lineHeight: 28,
+        unit: 'px',
+    },
+    600: {
+        fontSize: 20,
+        fontWeight: FontWeight.medium,
+        lineHeight: 24,
+        unit: 'px',
+    },
+    500: {
+        fontSize: 16,
+        fontWeight: FontWeight.semibold,
+        lineHeight: 20,
+        unit: 'px',
+    },
+    400: {
+        fontSize: 14,
+        fontWeight: FontWeight.semibold,
+        lineHeight: 16,
+        unit: 'px',
+    },
+    300: {
+        fontSize: 12,
+        fontWeight: FontWeight.semibold,
+        lineHeight: 16,
+        textTransform: 'uppercase',
+        unit: 'px',
+    },
+    200: {
+        fontSize: 12,
+        fontWeight: FontWeight.semibold,
+        lineHeight: 16,
+        unit: 'px',
+    },
+    100: {
+        fontSize: 11,
+        fontWeight: FontWeight.bold,
+        lineHeight: 16,
+        unit: 'px',
+    },
 }
 
 export const baseTheme = {
@@ -51,6 +123,8 @@ export const baseTheme = {
         backgroundColors,
         textColors,
     } as Colors,
+    textSizes,
+
     spacing(space: SpacingType | number | Array<SpacingType | number>): string {
         const resolveSpace = (sp: SpacingType | number) => {
             if (typeof sp === 'number') {

@@ -1,8 +1,13 @@
 import {
     Box, Color, MediaQueryBreakPoint, NailsApp, SpacingType,
 } from '@reactnails/core'
+import styled from 'styled-components'
 
 const color: Color = Color.RGB(207, 216, 220)
+
+const TextComp = styled.div`
+    background-color: #ccc;
+`
 
 const App = () => (
     <NailsApp theme={{
@@ -21,9 +26,13 @@ const App = () => (
             }}
             space={{
                 [MediaQueryBreakPoint.small]: SpacingType.m,
-                [MediaQueryBreakPoint.mediumMin]: [SpacingType.l, SpacingType.s],
+                [MediaQueryBreakPoint.mediumMin]: [SpacingType.l, SpacingType.xl],
             }}
             backgroundColor="backgroundColors.lightGray"
+            textStyle={{
+                [MediaQueryBreakPoint.small]: 500,
+                [MediaQueryBreakPoint.mediumMin]: 300,
+            }}
         >
             Administration
             {' '}
@@ -31,6 +40,7 @@ const App = () => (
             {' '}
             {color.hex}
         </Box>
+        <TextComp>Text</TextComp>
     </NailsApp>
 )
 

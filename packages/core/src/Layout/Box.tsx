@@ -1,10 +1,12 @@
-import React, { forwardRef, useCallback, useMemo } from 'react'
+import React, {
+    DetailedHTMLProps, forwardRef, HtmlHTMLAttributes, useCallback, useMemo,
+} from 'react'
 import styled from 'styled-components'
 
 import { Color } from '../Color'
 import { SpacingType } from '../Theme/baseTheme'
 import {
-    applyMediaQuery, MediaQueryAwareArrayType, MediaQueryAwareType, resolveBackgroundColor, resolveSpace,
+    applyMediaQuery, MediaQueryAwareArrayType, MediaQueryAwareType, resolveBackgroundColor, resolveSpace, resolveTextStyle,
 } from '../utils/PropertyResolver'
 import { MediaQueryBreakPoint } from './MediaQuery'
 
@@ -12,13 +14,23 @@ type WidthType = string | null | {
     [name in MediaQueryBreakPoint]?: string | null
 }
 
-export interface NailsBoxProps extends React.DetailedHTMLProps<React.HtmlHTMLAttributes<HTMLDivElement>, HTMLDivElement> {
+export interface NailsBoxProps extends Omit<DetailedHTMLProps<HtmlHTMLAttributes<HTMLDivElement>, HTMLDivElement>, 'ref'> {
     /**
      * width of box inside container. Has to be a ratio or list of ratios, e.g "1/2"
      */
     width?: MediaQueryAwareType<string>
+    /**
+     * padding to the inside elements
+     */
     space?: MediaQueryAwareArrayType<SpacingType>
+    /**
+     * background color
+     */
     backgroundColor?: Color | string
+    /**
+     * used text style
+     */
+    textStyle?: MediaQueryAwareType<number | string>
 }
 
 const resolveWidth = (width: string): string => `width: ${width};`
@@ -27,11 +39,10 @@ const StyledBox = styled.div<NailsBoxProps & { boxWidth: WidthType }>`
     ${applyMediaQuery(resolveWidth, 'boxWidth')}
     ${resolveSpace}
     ${(p) => resolveBackgroundColor(p.backgroundColor)}
+    ${resolveTextStyle}
 `
 
-export const Box = forwardRef<HTMLDivElement, NailsBoxProps>(({
-    width, space, backgroundColor, children,
-}, ref) => {
+export const Box = forwardRef<HTMLDivElement, NailsBoxProps>(({ width, children, ...rest }, ref) => {
     const resolveWidthEntry = useCallback((inputWidth: string): string | null => {
         const parts = inputWidth.split('/')
         if (parts.length !== 2) {
@@ -62,7 +73,7 @@ export const Box = forwardRef<HTMLDivElement, NailsBoxProps>(({
     const boxWidth = useMemo(() => convertBoxWidth(width), [convertBoxWidth, width])
 
     return (
-        <StyledBox ref={ref} boxWidth={boxWidth} space={space} backgroundColor={backgroundColor}>
+        <StyledBox {...rest} ref={ref} boxWidth={boxWidth}>
             {children}
         </StyledBox>
     )

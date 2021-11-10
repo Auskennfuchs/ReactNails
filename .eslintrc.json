@@ -53,7 +53,7 @@
         ],
         "react/self-closing-comp": "warn",
         "react/jsx-indent": "off",
-        "react/jsx-props-no-spreading": "warn",
+        "react/jsx-props-no-spreading": "off",
         "react/jsx-indent-props": [
             "warn",
             4

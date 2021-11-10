@@ -1,4 +1,4 @@
-import { cloneDeep, merge } from 'lodash'
+import { cloneDeep, merge } from 'lodash-es'
 
 import GlobalState from '../utils/GlobalState'
 import { baseTheme, ThemeEntry } from './baseTheme'

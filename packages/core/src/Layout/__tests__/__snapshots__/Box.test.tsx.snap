@@ -3,7 +3,7 @@
 exports[`Box tests should render 1`] = `
 <div>
   <div
-    class="sc-bdvvtL lhjBDN"
+    class="sc-bdvvtL gPlMRc"
   />
 </div>
 `;
@@ -11,7 +11,7 @@ exports[`Box tests should render 1`] = `
 exports[`Box tests should render space media query 1`] = `
 <div>
   <div
-    class="sc-bdvvtL jCqlVf"
+    class="sc-bdvvtL hmqSrW"
   />
 </div>
 `;
