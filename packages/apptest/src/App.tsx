@@ -22,8 +22,10 @@ const App = () => (
             width={{
                 [MediaQueryBreakPoint.small]: '100vw',
                 [MediaQueryBreakPoint.mediumMin]: '1/2',
-                [MediaQueryBreakPoint.wideMin]: '80vw',
+                [MediaQueryBreakPoint.wideMin]: '80%',
             }}
+            height="50vh"
+            minHeight="400px"
             space={{
                 [MediaQueryBreakPoint.small]: SpacingType.m,
                 [MediaQueryBreakPoint.mediumMin]: [SpacingType.l, SpacingType.xl],
